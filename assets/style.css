@@ -1,0 +1,34 @@
+/* Simple responsive styling */
+:root { --bg: #0b1020; --card: #11182e; --ink: #e8eefc; --muted:#9fb0d0; --acc:#5aa2ff; --danger:#ef5b5b; }
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body { margin: 0; font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--ink); }
+header, footer { padding: 1rem 1.2rem; }
+header h1 { margin: 0 0 .25rem; font-size: 1.6rem; }
+header p { margin: 0; color: var(--muted); }
+main { display: grid; gap: 1rem; padding: 1rem; max-width: 1200px; margin: 0 auto; }
+.card { background: var(--card); border: 1px solid #1b2545; border-radius: 14px; padding: 1rem; box-shadow: 0 5px 20px rgba(0,0,0,.25); }
+.hint { color: var(--muted); margin: .5rem 0 0; }
+
+
+label { display:block; margin-bottom: .4rem; }
+input { padding: .6rem .7rem; border-radius: 10px; border: 1px solid #2a3765; background: #0f1530; color: var(--ink); outline: none; }
+button { padding: .55rem .8rem; border-radius: 10px; background: var(--acc); color: #041027; border: none; font-weight: 600; cursor: pointer; }
+button[disabled] { opacity: .6; cursor: not-allowed; }
+button.danger { background: var(--danger); color: #fff; }
+.toolbar { display: flex; align-items: center; gap: .75rem; }
+.toolbar .spacer { flex: 1; }
+
+
+.table-wrap { overflow: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: .6rem; border-bottom: 1px solid #20305e; vertical-align: top; }
+th { position: sticky; top: 0; background: #121a34; z-index: 1; }
+
+
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+
+
+@media (min-width: 900px) {
+main { grid-template-columns: 360px 1fr; align-items: start; }
+}
